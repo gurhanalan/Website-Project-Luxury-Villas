@@ -2,46 +2,62 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /*********************************************** Utility Components  *************************************************/
 :root {
-  font-size: 62.5%;
+    font-size: 62.5%;
 
-  /***************** Custom Properties *****************/
+    /***************** Custom Properties *****************/
 
-  /* Colors */
-  --color-primary: #730039;
-  --color-primary-m-light: hsla(330, 100%, 23%, 0.55);
-  --color-primary-m-dark: hsla(330, 100%, 23%, 0.85);
+    /* Colors */
+    --color-primary: #730039;
+    --color-primary-m-light: hsla(330, 100%, 23%, 0.55);
+    --color-primary-m-dark: hsla(330, 100%, 23%, 0.85);
 
-  --color-secondary: #ffc513;
-  --color-secondary-m-light: hsla(45, 100%, 54%, 0.55);
-  --color-secondary-m-dark: rgba(255, 196, 19, 0.85);
+    --color-secondary: #ffc513;
+    --color-secondary-m-light: hsla(45, 100%, 54%, 0.55);
+    --color-secondary-m-dark: rgba(255, 196, 19, 0.85);
 
-  --color-tertiary: #ff724c;
-  --color-tertiary-m-light: hsla(13, 100%, 65%, 0.55);
-  --color-tertiary-m-dark: rgba(255, 115, 76, 0.85);
+    --color-tertiary: #ff724c;
+    --color-tertiary-m-light: hsla(13, 100%, 65%, 0.55);
+    --color-tertiary-m-dark: rgba(255, 115, 76, 0.85);
 
-  --color-quaternary: #f6eedf;
-  --color-quaternary-m-light: hsla(39, 56%, 92%, 0.55);
-  --color-quaternary-m-dark: hsla(39, 56%, 92%, 0.85);
+    --color-quaternary: #f6eedf;
+    --color-quaternary-m-light: hsla(39, 56%, 92%, 0.55);
+    --color-quaternary-m-dark: hsla(39, 56%, 92%, 0.85);
 
-  /* Transtion Duration */
-  --transition-duration: 0.3s;
+    /* Transtion Duration */
+    --transition-duration: 0.3s;
 
-  /* Section Title Font Size */
-  --font-size-title: calc(2rem + 2vw);
+    /* Section Title Font Size */
+    --font-size-title: calc(2rem + 2vw);
 
-  /* Section Padding */
-  --padding-section: 8vh 3vw;
+    /* Section Padding */
+    --padding-section: 8vh 3vw;
 }
 
 body {
-  font-family: "Titillium Web", sans-serif;
-  line-height: 1.7;
-  background-color: var(--color-quaternary);
+    font-family: "Titillium Web", sans-serif;
+    line-height: 1.7;
+    background-color: var(--color-quaternary);
+}
+
+.container {
+    display: grid;
+    grid-template-columns:
+        [container-start] 1fr [center-start] repeat(
+            10,
+            [col-start] minmax(min-content, 11rem) [col-end]
+        )
+        [center-end] 1fr [container-end];
+
+    grid-template-rows: 100vh;
+}
+
+#header {
+    grid-column: container-start / container-end;
 }
