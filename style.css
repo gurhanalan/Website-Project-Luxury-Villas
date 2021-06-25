@@ -81,3 +81,65 @@ body {
     background-color: var(--color-secondary);
     grid-column: col-start 7 / center-end;
 }
+
+/* +++++++++++++++++++++ VILLAS SECTION ++++++++++++++++++++++++++++++++++++++ */
+
+#villas {
+    background-color: var(--color-tertiary);
+    grid-column: container-start / container-end;
+}
+
+/* +++++++++++++++++++++ MOTTO SECTION ++++++++++++++++++++++++++++++++++++++ */
+
+#motto {
+    background-color: var(--color-primary);
+    grid-column: container-start / container-end;
+}
+
+/* +++++++++++++++++++++ EVENTS SECTION ++++++++++++++++++++++++++++++++++++++ */
+
+#events-content {
+    background-color: var(--color-primary-m-light);
+    grid-column: container-start / col-end 9;
+}
+
+#events-text {
+    background-color: var(--color-tertiary);
+    grid-column: col-start 10 / container-end;
+}
+
+/* +++++++++++++++++++++ GALLERY SECTION ++++++++++++++++++++++++++++++++++++++ */
+
+#gallery-text {
+    background-color: var(--color-primary);
+    grid-column: container-start / col-end 1;
+}
+
+#gallery-carousel {
+    grid-column: col-start 2 / container-end;
+}
+
+/* +++++++++++++++++++++ FEATURES SECTION ++++++++++++++++++++++++++++++++++++++ */
+
+#features-content {
+    background-color: var(--color-primary-m-light);
+    grid-column: container-start / col-end 9;
+}
+
+#features-text {
+    background-color: var(--color-tertiary);
+    grid-column: col-start 10 / container-end;
+}
+
+/* +++++++++++++++++++++ TESTIMONIALS SECTION ++++++++++++++++++++++++++++++++++++++ */
+
+#testimonials {
+    grid-column: center-start / center-end;
+}
+
+/* +++++++++++++++++++++ FOOTER SECTION ++++++++++++++++++++++++++++++++++++++ */
+
+#footer {
+    grid-column: container-start / container-end;
+    background-color: var(--color-primary);
+}
