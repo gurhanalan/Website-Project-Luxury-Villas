@@ -65,7 +65,15 @@ body {
 /* +++++++++++++++++++++ HEADER SECTION ++++++++++++++++++++++++++++++++++++++ */
 #header {
     grid-column: container-start / container-end;
-    background-color: var(--color-primary);
+    /* background-color: var(--color-primary); */
+    background-image: linear-gradient(
+            var(--color-primary-m-light),
+            var(--color-primary-m-light)
+        ),
+        url(img/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* +++++++++++++++++++++ BOOKING CONTENT SECTION ++++++++++++++++++++++++++++++++++++++ */
