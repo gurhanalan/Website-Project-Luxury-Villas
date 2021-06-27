@@ -76,6 +76,61 @@ body {
     background-position: center;
 }
 
+/* +++++++++++++++++  NAVIGATION */
+.header__main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header__main-nav--menu {
+    background-color: var(--color-secondary-m-light);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header__main-nav input[type="checkbox"]:checked ~ .header__main-nav--menu {
+    background-color: aquamarine;
+}
+
+.header__main-nav--menu a:link,
+.header__main-nav--menu a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.header__main-nav--menu ul {
+    list-style: none;
+    text-align: center;
+}
+
+/* Hambuger Menu */
+.header__main-nav--hamburger div {
+    width: 4rem;
+    background-color: white;
+    padding: 0.2rem;
+    position: relative;
+}
+
+.header__main-nav--hamburger div::before,
+.header__main-nav--hamburger div::after {
+    content: "";
+    width: 70%;
+    background-color: white;
+    padding: 0.2rem;
+    position: absolute;
+}
+.header__main-nav--hamburger div::before {
+    top: -300%;
+    left: 0;
+}
+.header__main-nav--hamburger div::after {
+    top: 300%;
+    right: 0;
+}
+
 /* +++++++++++++++++++++ BOOKING CONTENT SECTION ++++++++++++++++++++++++++++++++++++++ */
 
 #booking-content {
