@@ -90,9 +90,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: scaleX(0);
+    transition: transform var(--transition-duration);
 }
 .header__main-nav input[type="checkbox"]:checked ~ .header__main-nav--menu {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
+    transform: scaleX(100%);
 }
 
 .header__main-nav--menu a:link,
@@ -107,6 +110,29 @@ body {
 }
 
 /* Hambuger Menu */
+.header__main-nav input[type="checkbox"] {
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    height: 5rem;
+    width: 5rem;
+    cursor: pointer;
+    z-index: 5;
+    opacity: 0;
+    /* visibility: hidden; */
+}
+.header__main-nav--hamburger {
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    background-color: var(--color-secondary-m-dark);
+    height: 5rem;
+    width: 5rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .header__main-nav--hamburger div {
     width: 4rem;
     background-color: white;
@@ -118,7 +144,7 @@ body {
 .header__main-nav--hamburger div::after {
     content: "";
     width: 70%;
-    background-color: white;
+    background-color: inherit;
     padding: 0.2rem;
     position: absolute;
 }
