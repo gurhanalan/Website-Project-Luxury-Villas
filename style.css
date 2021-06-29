@@ -91,17 +91,21 @@ body {
     align-items: center;
     justify-content: center;
     transform: scaleX(0);
-    transition: transform var(--transition-duration);
+    transition: all var(--transition-duration);
+    visibility: hidden;
 }
+
 .header__main-nav input[type="checkbox"]:checked ~ .header__main-nav--menu {
-    /* background-color: aquamarine; */
+    visibility: visible;
+
     transform: scaleX(100%);
 }
 
 .header__main-nav--menu a:link,
 .header__main-nav--menu a:visited {
     text-decoration: none;
-    color: white;
+    color: var(--color-quaternary);
+    font-size: calc(1.5rem + 0.5vw);
 }
 
 .header__main-nav--menu ul {
@@ -112,8 +116,8 @@ body {
 /* Hambuger Menu */
 .header__main-nav input[type="checkbox"] {
     position: absolute;
-    top: 5rem;
-    left: 5rem;
+    top: 3rem;
+    left: 3rem;
     height: 5rem;
     width: 5rem;
     cursor: pointer;
@@ -123,8 +127,8 @@ body {
 }
 .header__main-nav--hamburger {
     position: absolute;
-    top: 5rem;
-    left: 5rem;
+    top: 3rem;
+    left: 3rem;
     background-color: var(--color-secondary-m-dark);
     height: 5rem;
     width: 5rem;
@@ -133,30 +137,61 @@ body {
     align-items: center;
     justify-content: center;
 }
+/* Hamburger Lines */
 .header__main-nav--hamburger div {
     width: 4rem;
-    background-color: white;
-    padding: 0.2rem;
+    background-color: var(--color-quaternary);
+    padding: 0.15rem;
     position: relative;
+    transition: all var(--transition-duration) ease-in-out;
 }
 
+/* Top and bottom lines */
 .header__main-nav--hamburger div::before,
 .header__main-nav--hamburger div::after {
     content: "";
     width: 70%;
     background-color: inherit;
-    padding: 0.2rem;
+    padding: 0.15rem;
     position: absolute;
 }
 .header__main-nav--hamburger div::before {
-    top: -300%;
+    top: -1rem;
     left: 0;
 }
 .header__main-nav--hamburger div::after {
-    top: 300%;
+    top: 1rem;
     right: 0;
 }
 
+/* Rotating the lines */
+.header__main-nav
+    input[type="checkbox"]:checked
+    + .header__main-nav--hamburger
+    > div {
+    transform: rotate(135deg);
+}
+
+.header__main-nav
+    input[type="checkbox"]:checked
+    + .header__main-nav--hamburger
+    > div::before,
+.header__main-nav
+    input[type="checkbox"]:checked
+    + .header__main-nav--hamburger
+    > div::after {
+    top: 0;
+    width: 100%;
+    left: 0;
+    transform: rotate(270deg);
+}
+
+.header__main-nav
+    input[type="checkbox"]:checked:hover
+    + .header__main-nav--hamburger
+    > div {
+    transform: rotate(405deg);
+}
 /* +++++++++++++++++++++ BOOKING CONTENT SECTION ++++++++++++++++++++++++++++++++++++++ */
 
 #booking-content {
