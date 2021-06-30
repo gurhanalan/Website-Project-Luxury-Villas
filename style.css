@@ -58,9 +58,9 @@ body {
     grid-template-rows: 100vh;
 }
 
-.container > * {
+/* .container > * {
     font-size: 5rem;
-}
+} */
 
 /* +++++++++++++++++++++ HEADER SECTION ++++++++++++++++++++++++++++++++++++++ */
 #header {
@@ -216,6 +216,27 @@ body {
     > div {
     transform: rotate(405deg);
 }
+
+/* +++++++++++++++++  HEADER LOGO */
+.logo {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo__link {
+    color: var(--color-quaternary);
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.logo__link span {
+    color: var(--color-tertiary);
+    font-size: 3rem;
+    font-family: "Times New Roman", Times, serif;
+}
+
 /* +++++++++++++++++++++ BOOKING CONTENT SECTION ++++++++++++++++++++++++++++++++++++++ */
 
 #booking-content {
