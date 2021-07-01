@@ -51,7 +51,7 @@ body {
     grid-template-columns:
         [container-start] 1fr [center-start] repeat(
             10,
-            [col-start] minmax(min-content, 11rem) [col-end]
+            [col-start] minmax(min-content, 15rem) [col-end]
         )
         [center-end] 1fr [container-end];
 
@@ -85,23 +85,28 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 30;
 }
 
 .header__main-nav--menu {
-    background-color: var(--color-secondary-m-light);
     width: 100vw;
     height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+
+    background-color: var(--color-secondary-m-dark);
+
     display: flex;
     align-items: center;
     justify-content: center;
     transform: scaleX(0);
     transition: all var(--transition-duration);
-    visibility: hidden;
 }
 
 .header__main-nav input[type="checkbox"]:checked ~ .header__main-nav--menu {
     visibility: visible;
-
     transform: scaleX(100%);
 }
 
@@ -109,11 +114,13 @@ body {
 .header__main-nav--menu a:visited {
     text-decoration: none;
     color: var(--color-quaternary);
-    font-size: calc(1.5rem + 0.5vw);
+    font-size: calc(2.5rem + 1vw);
     padding: 1rem 2rem;
 
     position: relative;
     z-index: 5;
+    display: inline-block;
+    margin-bottom: 2rem;
 }
 
 .header__main-nav--menu a:link::before,
@@ -134,6 +141,7 @@ body {
 .header__main-nav--menu a:hover::before,
 .header__main-nav--menu a:active::before {
     transform: scaleY(100%);
+    box-shadow: 0rem 3rem 4rem rgba(0, 0, 0, 0.288);
 }
 
 .header__main-nav--menu ul {
@@ -157,14 +165,29 @@ body {
     position: absolute;
     top: 3rem;
     left: 3rem;
-    background-color: var(--color-secondary-m-dark);
+    background-color: var(--color-secondary);
     height: 5rem;
     width: 5rem;
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    animation: navroll 2s ease-in-out;
 }
+
+@keyframes navroll {
+    0% {
+        transform: translateX(150rem) rotate(1600deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0rem) rotate(0deg);
+        opacity: 1;
+    }
+}
+
 /* Hamburger Lines */
 .header__main-nav--hamburger div {
     width: 4rem;
@@ -271,6 +294,7 @@ body {
     border: solid 0.2rem var(--color-tertiary);
     position: relative;
     z-index: 1;
+    cursor: pointer;
 }
 
 .header-content__link::before {
