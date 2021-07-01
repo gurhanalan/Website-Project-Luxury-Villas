@@ -74,6 +74,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* +++++++++++++++++  NAVIGATION */
@@ -235,6 +239,56 @@ body {
     color: var(--color-tertiary);
     font-size: 3rem;
     font-family: "Times New Roman", Times, serif;
+}
+/* +++++++++++++++++  HEADER CONTENT */
+.header-content {
+    color: var(--color-quaternary);
+    height: 70%;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.header-content h1 {
+    font-size: calc(7rem + 2vw);
+    font-weight: 300;
+    line-height: 1;
+}
+
+.header-content p {
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+.header-content__link:link,
+.header-content__link:visited {
+    font-size: 2.5rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: var(--color-quaternary);
+    border: solid 0.2rem var(--color-tertiary);
+    position: relative;
+    z-index: 1;
+}
+
+.header-content__link::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-tertiary);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: scaleY(0);
+    transition: transform var(--transition-duration) ease-in-out;
+}
+
+.header-content__link:hover::before,
+.header-content__link:active::before {
+    transform: scaleY(1);
 }
 
 /* +++++++++++++++++++++ BOOKING CONTENT SECTION ++++++++++++++++++++++++++++++++++++++ */
