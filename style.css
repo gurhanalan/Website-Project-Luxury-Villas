@@ -318,10 +318,57 @@ body {
 /* +++++++++++++++++++++ BOOKING CONTENT SECTION ++++++++++++++++++++++++++++++++++++++ */
 
 #booking-content {
-    background-color: var(--color-secondary);
+    /* background-color: var(--color-secondary); */
     grid-column: center-start / col-end 6;
+    font-weight: 200;
+    padding: 5rem;
+    display: grid;
+    row-gap: 4rem;
 }
 
+.booking-content__title {
+    font-size: calc(2rem + 2vw);
+    font-weight: 300;
+    position: relative;
+    letter-spacing: 0.3rem;
+    display: inline-block;
+}
+
+.booking-content__title::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 40%;
+    background-color: var(--color-secondary);
+    bottom: 0;
+    left: 20%;
+}
+
+.booking-content__para {
+    font-size: calc(1rem + 1vw);
+}
+
+.booking-content__info {
+    display: flex;
+}
+
+.booking-content__info i {
+    font-size: calc(2rem + 1vw);
+
+    color: var(--color-secondary);
+}
+
+.booking-content__info p {
+    font-size: calc(1rem + 1vw);
+    font-weight: 200;
+}
+
+.booking-content__info > * {
+    flex: 1;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
 /* +++++++++++++++++++++ BOOKING DATE SECTION ++++++++++++++++++++++++++++++++++++++ */
 
 #booking-date {
