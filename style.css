@@ -374,11 +374,15 @@ body {
 #booking-date {
     /* background-color: var(--color-secondary); */
     grid-column: col-start 7 / center-end;
+    padding: 5rem 3rem;
+
+    display: grid;
+    row-gap: 2rem;
 }
 
 .booking-date__schedule {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .booking-date__schedule > * > div {
@@ -421,6 +425,28 @@ body {
     font-size: calc(1.5rem + 1vw);
 }
 
+.booking-date__link:link,
+.booking-date__link:visited {
+    text-decoration: none;
+    background-color: var(--color-secondary);
+    font-size: calc(1rem + 1vw);
+    padding: 1rem 2rem;
+    color: var(--color-quaternary);
+    border: solid 0.2rem var(--color-secondary);
+    justify-self: start;
+    transition: all var(--transition-duration);
+}
+
+.booking-date__link:hover,
+.booking-date__link:active {
+    background-color: var(--color-quaternary);
+    color: var(--color-secondary);
+}
+
+.booking-date__contact {
+    font-size: 2rem;
+    font-weight: 200;
+}
 /* +++++++++++++++++++++ VILLAS SECTION ++++++++++++++++++++++++++++++++++++++ */
 
 #villas {
