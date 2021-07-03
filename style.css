@@ -387,12 +387,27 @@ body {
     padding: 3rem 5rem;
     display: grid;
     gap: 2rem;
+
+    position: relative;
+}
+
+.booking-date__schedule > * > div::before {
+    content: "";
+    position: absolute;
+    /* display: inline-block; */
+    bottom: 100%;
+    left: 50%;
+    margin-left: -1.5rem;
+    border-width: 1.5rem;
+    border-style: solid;
+    border-color: transparent transparent var(--color-secondary) transparent;
 }
 
 .booking-date__schedule h5 {
     font-size: calc(1rem + 1vw);
-    font-weight: 300;
+    font-weight: 600;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 .booking-date__schedule p {
