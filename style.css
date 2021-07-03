@@ -372,8 +372,38 @@ body {
 /* +++++++++++++++++++++ BOOKING DATE SECTION ++++++++++++++++++++++++++++++++++++++ */
 
 #booking-date {
-    background-color: var(--color-secondary);
+    /* background-color: var(--color-secondary); */
     grid-column: col-start 7 / center-end;
+}
+
+.booking-date__schedule {
+    display: flex;
+    justify-content: space-around;
+}
+
+.booking-date__schedule > * > div {
+    background-color: var(--color-secondary);
+    display: inline-block;
+    padding: 3rem 5rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.booking-date__schedule h5 {
+    font-size: calc(1rem + 1vw);
+    font-weight: 300;
+    text-align: center;
+}
+
+.booking-date__schedule p {
+    font-size: calc(1rem + 1vw);
+    text-align: center;
+    color: var(--color-quaternary);
+}
+
+.booking-date__schedule p:nth-child(2) {
+    font-weight: 600;
+    font-size: calc(1.5rem + 1vw);
 }
 
 /* +++++++++++++++++++++ VILLAS SECTION ++++++++++++++++++++++++++++++++++++++ */
