@@ -583,8 +583,39 @@ body {
 #motto {
     background-color: var(--color-primary);
     grid-column: container-start / container-end;
+
+    color: var(--color-quaternary);
+    padding: 5rem 2rem;
 }
 
+.motto__title {
+    text-align: center;
+    font-size: var(--font-size-title);
+    font-weight: 300;
+    position: relative;
+    /* display: inline-block; */
+    padding: 1rem 0;
+}
+
+.motto__title::after {
+    content: "";
+    position: absolute;
+
+    height: 2px;
+    background-color: var(--color-quaternary);
+    width: 10%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.motto__para {
+    font-size: calc(1rem + 1vw);
+    font-weight: 200;
+    max-width: 110rem;
+    margin: 2rem auto 0;
+    text-align: justify;
+}
 /* +++++++++++++++++++++ EVENTS SECTION ++++++++++++++++++++++++++++++++++++++ */
 
 #events-content {
