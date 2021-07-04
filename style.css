@@ -452,8 +452,58 @@ body {
 #villas {
     background-color: var(--color-tertiary);
     grid-column: container-start / container-end;
+    padding: 5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
 }
 
+.villa {
+    color: var(--color-quaternary);
+    max-width: 45rem;
+    padding: 3rem;
+    display: grid;
+    row-gap: 4rem;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.villa-1 {
+    background: linear-gradient(
+            var(--color-primary-m-light),
+            var(--color-secondary-m-light)
+        ),
+        url(img/Villas/villa-1.jpg);
+}
+.villa-2 {
+    background: linear-gradient(
+            var(--color-primary-m-light),
+            var(--color-secondary-m-light)
+        ),
+        url(img/Villas/villa-2.jpg);
+}
+
+.villa__title {
+    font-size: var(--font-size-title);
+    font-weight: 400;
+    color: inherit;
+}
+
+.villa__para {
+    font-size: calc(1rem + 1vw);
+}
+
+.villa__link {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: calc(1rem + 1vw);
+    background-color: var(--color-quaternary);
+    padding: 1rem 1.5rem;
+    justify-self: start;
+}
 /* +++++++++++++++++++++ MOTTO SECTION ++++++++++++++++++++++++++++++++++++++ */
 
 #motto {
