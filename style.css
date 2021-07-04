@@ -699,13 +699,44 @@ div[class~="villa"] {
 /* +++++++++++++++++++++ FEATURES SECTION ++++++++++++++++++++++++++++++++++++++ */
 
 #features-content {
-    background-color: var(--color-primary-m-light);
+    background-color: var(--color-secondary);
     grid-column: container-start / col-end 9;
+
+    display: flex;
+    gap: 0.5rem;
+}
+
+.feature-1 {
+    background: linear-gradient(
+            var(--color-secondary-m-light),
+            var(--color-secondary-m-light)
+        ),
+        url(img/Features/cocktail.jpg);
+}
+.feature-2 {
+    background: linear-gradient(
+            var(--color-secondary-m-light),
+            var(--color-secondary-m-light)
+        ),
+        url(img/Features/surfing.jpg);
+}
+
+.feature {
+    padding: 4rem;
+    color: var(--color-quaternary);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-size: cover;
 }
 
 #features-text {
-    background-color: var(--color-tertiary);
+    background-color: var(--color-secondary);
+
     grid-column: col-start 10 / container-end;
+
+    display: grid;
+    place-items: center;
 }
 
 /* +++++++++++++++++++++ TESTIMONIALS SECTION ++++++++++++++++++++++++++++++++++++++ */
@@ -736,5 +767,14 @@ div[class~="villa"] {
     #villas {
         padding: 2rem;
         gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #events-content {
+        flex-direction: column;
+    }
+    #features-content {
+        flex-direction: column;
     }
 }
