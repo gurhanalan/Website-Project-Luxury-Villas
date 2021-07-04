@@ -450,25 +450,35 @@ body {
 /* +++++++++++++++++++++ VILLAS SECTION ++++++++++++++++++++++++++++++++++++++ */
 
 #villas {
-    background-color: var(--color-tertiary);
+    /* background-color: var(--color-tertiary); */
     grid-column: container-start / container-end;
     padding: 5rem;
 
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
+    justify-content: center;
 }
 
 .villa {
     color: var(--color-quaternary);
-    max-width: 45rem;
+    max-width: 50rem;
+
     padding: 3rem;
     display: grid;
     row-gap: 4rem;
+    grid-template-rows: min-content 1fr min-content;
 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    transition: all var(--transition-duration);
+}
+
+.villa:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.219);
 }
 
 .villa-1 {
@@ -485,6 +495,34 @@ body {
         ),
         url(img/Villas/villa-2.jpg);
 }
+.villa-3 {
+    background: linear-gradient(
+            var(--color-primary-m-light),
+            var(--color-secondary-m-light)
+        ),
+        url(img/Villas/villa-3.jpg);
+}
+.villa-4 {
+    background: linear-gradient(
+            var(--color-primary-m-light),
+            var(--color-secondary-m-light)
+        ),
+        url(img/Villas/villa-4.jpg);
+}
+.villa-5 {
+    background: linear-gradient(
+            var(--color-primary-m-light),
+            var(--color-secondary-m-light)
+        ),
+        url(img/Villas/villa-5.jpg);
+}
+.villa-6 {
+    background: linear-gradient(
+            var(--color-primary-m-light),
+            var(--color-secondary-m-light)
+        ),
+        url(img/Villas/villa-6.jpg);
+}
 
 .villa__title {
     font-size: var(--font-size-title);
@@ -494,15 +532,51 @@ body {
 
 .villa__para {
     font-size: calc(1rem + 1vw);
+    align-self: end;
 }
 
-.villa__link {
+.villa__link:link,
+.villa__link:visited {
     text-decoration: none;
     color: var(--color-primary);
     font-size: calc(1rem + 1vw);
     background-color: var(--color-quaternary);
     padding: 1rem 1.5rem;
     justify-self: start;
+    align-self: end;
+
+    position: relative;
+    z-index: 0;
+    transition: all var(--transition-duration) 0.1s;
+
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+
+.villa__link::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background-color: var(--color-secondary);
+    top: 0;
+    left: -50%;
+    z-index: -1;
+
+    transform: skewX(50deg) scaleX(0);
+    /* transform-origin: right; */
+    transition: all var(--transition-duration);
+    backface-visibility: hidden;
+}
+
+.villa__link:hover::before,
+.villa__link:active::before {
+    /* transform-origin: left; */
+    transform: skewX(50deg) scaleX(1);
+}
+.villa__link:hover,
+.villa__link:active {
+    color: var(--color-quaternary);
 }
 /* +++++++++++++++++++++ MOTTO SECTION ++++++++++++++++++++++++++++++++++++++ */
 
