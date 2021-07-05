@@ -742,6 +742,11 @@ div[class~="villa"] {
 #testimonials {
     grid-column: center-start / center-end;
     padding: var(--padding-section);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 5rem;
+    justify-items: center;
 }
 
 .card {
@@ -789,6 +794,21 @@ div[class~="villa"] {
 }
 .card--1 .card__front {
     background-image: url(img/Testimonials/testimonials-1.jpg);
+}
+.card--2 .card__front {
+    background-image: url(img/Testimonials/testimonials-2.jpg);
+}
+.card--3 .card__front {
+    background-image: url(img/Testimonials/testimonials-3.jpg);
+}
+.card--4 .card__front {
+    background-image: url(img/Testimonials/testimonials-4.jpg);
+}
+.card--5 .card__front {
+    background-image: url(img/Testimonials/testimonials-5.jpg);
+}
+.card--6 .card__front {
+    background-image: url(img/Testimonials/testimonials-6.jpg);
 }
 
 .card__back {
