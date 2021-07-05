@@ -26,6 +26,8 @@
             type="image/x-icon"
         />
         <link rel="stylesheet" href="style.css" />
+        <script defer src="script.js"></script>
+
         <title>Vision Luxury Villas | True Relaxation</title>
     </head>
     <body class="container">
@@ -223,14 +225,22 @@
         <!-- ++++++++++++++++++++++ GALLERY COROUSEL +++++++++++++++++++++++++ -->
         <section id="gallery-carousel">
             <div class="gallery__images">
-                <img src="img/Gallery/gallery-1.jpg" alt="Gallery Photo" class="gallery__image">
+                <img src="img/Gallery/gallery-1.jpg" alt="Gallery Photo" class="gallery__image__temp">
+                <div class="gallery__image__cont">                <img src="img/Gallery/gallery-1.jpg" alt="Gallery Photo" class="gallery__image">
+                </div>
+                <div class="gallery__image__cont">                <img src="img/Gallery/gallery-2.jpg" alt="Gallery Photo" class="gallery__image">
+                </div>
+                <div class="gallery__image__cont">                <img src="img/Gallery/gallery-3.jpg" alt="Gallery Photo" class="gallery__image">
+                </div>
             </div>
+
+
             <button class="gallery__btn gallery__btn--left"><i class="fas fa-caret-left"></i></button>
             <button class="gallery__btn gallery__btn--right"><i class="fas fa-caret-right"></i></button>
 
             <div class="gallery__dots">
-                <button class="gallery__dots__dot"><i class="fas fa-circle"></i></button>
-                <button class="gallery__dots__dot gallery__dots__dot--active"><i class="fas fa-circle"></i></button>
+                <!-- <button class="gallery__dots__dot"><i class="fas fa-circle"></i></button>
+                <button class="gallery__dots__dot gallery__dots__dot--active"><i class="fas fa-circle"></i></button> -->
             </div>
         </section>
         <!-- ++++++++++++++++++++++ FEATURES CONTENT SECTION +++++++++++++++++++++++++ -->

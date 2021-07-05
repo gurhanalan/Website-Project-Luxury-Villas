@@ -697,26 +697,45 @@ div[class~="villa"] {
     font-weight: 400;
     letter-spacing: 0.7rem;
     color: var(--color-quaternary);
-    /* writing-mode: tb-rl; */
-    transform: rotate(-90deg);
+    writing-mode: vertical-rl;
 }
 #gallery-carousel {
     grid-column: col-start 2 / container-end;
 
-    height: 90vh;
+    max-height: 90vh;
 
     position: relative;
+
+    overflow: hidden;
 }
 
 .gallery__images {
     height: 100%;
     width: 100%;
+
+    position: relative;
+}
+
+.gallery__image__temp {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery__image__cont {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    transition: transform 0.7s;
 }
 
 .gallery__image {
     height: 100%;
     width: 100%;
     object-fit: cover;
+
+    /* position: absolute; */
 }
 
 .gallery__btn {
