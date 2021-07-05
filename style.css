@@ -681,8 +681,6 @@ div[class~="villa"] {
     letter-spacing: 0.7rem;
     color: var(--color-quaternary);
     writing-mode: vertical-lr;
-    text-orientation: mixed;
-    /* transform: rotate(90deg); */
 }
 
 /* +++++++++++++++++++++ GALLERY SECTION ++++++++++++++++++++++++++++++++++++++ */
@@ -750,6 +748,37 @@ div[class~="villa"] {
 #footer {
     grid-column: container-start / container-end;
     background-color: var(--color-primary);
+    padding: var(--padding-section);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 5rem;
+    justify-items: center;
+}
+
+.footer__text {
+}
+
+.footer__text__para {
+    font-size: calc(1rem + 1vw);
+    color: var(--color-quaternary);
+}
+
+.footer__links {
+    display: flex;
+    gap: 3rem;
+}
+
+.footer__link {
+}
+
+.footer__link i {
+    font-size: 3rem;
+    color: var(--color-primary);
+
+    padding: 2rem;
+    background-color: var(--color-secondary);
+    border-radius: 50%;
 }
 
 /* +++++++++++++++++++++ MEDIA QUERIES ++++++++++++++++++++++++++++++++++++++ */
