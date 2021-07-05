@@ -688,12 +688,84 @@ div[class~="villa"] {
 #gallery-text {
     background-color: var(--color-primary);
     grid-column: container-start / col-end 1;
+    display: grid;
+    place-items: center;
 }
 
+.gallery-text__title {
+    font-size: var(--font-size-title);
+    font-weight: 400;
+    letter-spacing: 0.7rem;
+    color: var(--color-quaternary);
+    /* writing-mode: tb-rl; */
+    transform: rotate(-90deg);
+}
 #gallery-carousel {
     grid-column: col-start 2 / container-end;
+
+    height: 90vh;
+
+    position: relative;
 }
 
+.gallery__images {
+    height: 100%;
+    width: 100%;
+}
+
+.gallery__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery__btn {
+    font-size: 8rem;
+    color: var(--color-secondary);
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.gallery__btn--left {
+    left: 2rem;
+}
+.gallery__btn--right {
+    right: 2rem;
+}
+
+.gallery__dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 1;
+
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.gallery__dots__dot {
+    font-size: 2rem;
+    color: var(--color-secondary);
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.gallery__dots__dot--active {
+    color: var(--color-primary);
+}
 /* +++++++++++++++++++++ FEATURES SECTION ++++++++++++++++++++++++++++++++++++++ */
 
 #features-content {
@@ -827,7 +899,7 @@ div[class~="villa"] {
     backface-visibility: hidden;
 
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
 }
 
@@ -851,9 +923,6 @@ div[class~="villa"] {
     justify-items: center;
 }
 
-.footer__text {
-}
-
 .footer__text__para {
     font-size: calc(1rem + 1vw);
     color: var(--color-quaternary);
@@ -862,9 +931,6 @@ div[class~="villa"] {
 .footer__links {
     display: flex;
     gap: 3rem;
-}
-
-.footer__link {
 }
 
 .footer__link i {
@@ -909,5 +975,23 @@ div[class~="villa"] {
     }
     #features-content {
         flex-direction: column;
+    }
+}
+
+/* @media only screen and (max-width: 56.25em), only screen and (hover: none) */
+@media only screen and (hover: none) {
+    .card__back {
+        transform: rotateY(0deg);
+        height: min-content;
+        /* top: 30%; */
+        background-color: var(--color-quaternary-m-light);
+        color: black;
+        /* bottom: 0 !important; */
+        border-top-left-radius: 10%;
+        border-top-right-radius: 10%;
+    }
+
+    .card__front p {
+        visibility: hidden;
     }
 }
