@@ -741,8 +741,83 @@ div[class~="villa"] {
 
 #testimonials {
     grid-column: center-start / center-end;
+    padding: var(--padding-section);
 }
 
+.card {
+    width: 30rem;
+    height: 45rem;
+    perspective: 100rem;
+    position: relative;
+}
+
+.card__front {
+    height: 100%;
+    width: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    position: relative;
+    text-align: center;
+
+    transition: all 0.5s;
+    backface-visibility: hidden;
+}
+
+.card__front h3 {
+    font-size: 3rem;
+    font-weight: 500;
+    background-color: var(--color-quaternary-m-light);
+    padding: 0.5rem 2rem;
+    display: inline-block;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin-top: 1rem;
+}
+
+.card__front p {
+    font-size: 2rem;
+
+    background-color: var(--color-quaternary-m-light);
+    padding: 0.5rem 2rem;
+    display: inline-block;
+    border-radius: 5rem;
+    position: relative;
+    top: 30rem;
+}
+.card--1 .card__front {
+    background-image: url(img/Testimonials/testimonials-1.jpg);
+}
+
+.card__back {
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-secondary);
+    color: var(--color-quaternary);
+    font-size: 2rem;
+    padding: 3rem;
+    text-align: justify;
+    display: grid;
+    place-items: center;
+
+    transform: rotateY(180deg);
+    transition: all 0.5s;
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Card flip functionality */
+.card:hover .card__front {
+    transform: rotateY(-180deg);
+}
+.card:hover .card__back {
+    transform: rotateY(0deg);
+}
 /* +++++++++++++++++++++ FOOTER SECTION ++++++++++++++++++++++++++++++++++++++ */
 
 #footer {
@@ -774,13 +849,22 @@ div[class~="villa"] {
 
 .footer__link i {
     font-size: 3rem;
-    color: var(--color-primary);
+    /* color: var(--color-primary); */
 
     padding: 2rem;
-    background-color: var(--color-secondary);
-    border-radius: 50%;
+    color: var(--color-quaternary);
+    border-radius: 100%;
+
+    transition: all var(--transition-duration);
 }
 
+.footer__link:hover i {
+    color: var(--color-primary);
+
+    background-color: var(--color-secondary);
+    box-shadow: 0rem 0rem 4rem 2rem var(--color-secondary-m-light);
+    transform: scale(1.1);
+}
 /* +++++++++++++++++++++ MEDIA QUERIES ++++++++++++++++++++++++++++++++++++++ */
 
 @media screen and (max-width: 800px) {
