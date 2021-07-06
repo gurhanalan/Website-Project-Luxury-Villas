@@ -772,7 +772,7 @@ div[class~="villa"] {
     flex-wrap: wrap;
 }
 
-.gallery__dots__dot {
+/* .gallery__dots__dot {
     font-size: 2rem;
     color: var(--color-secondary);
     outline: none;
@@ -784,6 +784,21 @@ div[class~="villa"] {
 
 .gallery__dots__dot--active {
     color: var(--color-primary);
+} */
+.gallery__dots__dot {
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--color-secondary);
+    outline: none;
+    border: none;
+    /* background-color: transparent; */
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.gallery__dots__dot--active {
+    background-color: var(--color-primary);
 }
 /* +++++++++++++++++++++ FEATURES SECTION ++++++++++++++++++++++++++++++++++++++ */
 
@@ -940,6 +955,7 @@ div[class~="villa"] {
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 5rem;
     justify-items: center;
+    align-items: center;
 }
 
 .footer__text__para {
